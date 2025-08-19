@@ -9,3 +9,5 @@ accountPassword="sania_542"
 accountCity = "durgapur"
 
 console.log(accountId);
+
+
