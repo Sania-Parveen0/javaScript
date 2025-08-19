@@ -28,6 +28,12 @@ let someNumber = 33
 
 let stringNumber = String(someNumber)
 
-console.log( typeof stringNumber)
-console.log(  stringNumber)
+// console.log( typeof stringNumber)
+// console.log(  stringNumber)
 
+//**********************OPERATIONS***************************
+
+let value = 3
+let negValue = -value
+
+console.log(negValue);
