@@ -27,6 +27,31 @@ let myObj= {
 
 console.log(typeof bigNumber)
 
-/* 
+
+// **********************************************************************************************
+//***************************************Memory**************************************************
+/* Stack(primitive) , Heap(non-primitive)
+
 
 */
+
+let myYoutubename = "sania_sayan_patra"
+let anotherName = myYoutubename
+ anotherName = "sayan patra"
+
+
+console.log(anotherName);
+console.log(myYoutubename);
+
+let user = {
+    email: "fdthjffgj.com",
+    upi: "vdtrfb@255"
+}
+
+let user2 = user
+
+user2.email = "sania@g.com"
+
+console.log(user.email)
+console.log(user2.email)
+
