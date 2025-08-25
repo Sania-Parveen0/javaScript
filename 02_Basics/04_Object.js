@@ -67,3 +67,9 @@ const course = {
 
 const {courseInstructur : instructor} = course
 console.log(instructor);
+
+[
+    {},
+    {},
+    {},
+]
