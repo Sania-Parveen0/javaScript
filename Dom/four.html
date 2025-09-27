@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <ul class="language">
+        <li>javascript</li>
+        <li>java</li>
+        <li>c++</li>
+        <li>R</li>
+    </ul>
+
+    <ul id="DB">
+        <li>mongoDB</li>
+        <li>sql</li>
+        <li>no sql</li>
+        <li>postgree</li>
+    </ul>
+    <script>
+       function addlangu(lang){
+        const list = document.createElement('li')
+        const textNode = document.createTextNode(`${lang}`)
+        list.appendChild(textNode)
+        document.querySelector(".language").appendChild(list)
+        
+       }
+
+       addlangu("python")
+
+       //edit the list
+
+       const editlang = document.querySelector("#DB li:nth-child(2)")
+       console.log(editlang)
+       const newli = document.createElement('li')
+       newli.textContent="PHP"
+       editlang.replaceWith(newli)
+
+    //remove
+
+    const delLang = document.querySelector("#DB li:last-child")
+    delLang.remove()
+       
+
+
+
+
+    </script>
+</body>
+</html>
