@@ -4,10 +4,16 @@
 //  console.log(word[4]);
 //  console.log(typeof(word));
 
+
 const char = str.split("")
 // console.log(char[3]);
 
 
-const full = str.split()
-console.log(full);
- 
+// const full = str.split()
+// console.log(full);
+
+const newStr = str.split("").reverse().join("")
+console.log(newStr);
+
+
+
