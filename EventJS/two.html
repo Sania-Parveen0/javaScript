@@ -7,6 +7,7 @@
 </head>
 <body>
     <H1>Sania Parveen nisa </H1>
+     <button id="start">start</button>
     <button id="stop">stop</button>
 </body>
 <script>
@@ -16,16 +17,45 @@
     // setTimeout(myName,4000)
 
 
-const change = function () {
-    document.querySelector('H1').innerHTML = "Sayan Patra"
+// const change = function () {
+//     document.querySelector('H1').innerHTML = "Sayan Patra"
+// }
+
+// const prints = setTimeout(change,4000)
+
+// document.querySelector('#stop').addEventListener('click',function () {
+//     clearTimeout(prints)
+//     console.log("stopped")
+// })
+
+
+                                        // A SMALL PROJECT//                   
+
+//Question:: wap to print hii when someone clicks the start button and stop to print hii when someone clicks the stop button using setInterval and clearInterval
+
+
+const startBtn = document.querySelector('#start')
+startBtn.style.backgroundColor="#0e580e"
+startBtn.style.color="white"
+
+const stopBtn = document.querySelector('#stop')
+stopBtn.style.backgroundColor="#bd0b0b"
+stopBtn.style.color="white"
+
+const prints= function () {
+    console.log("hii",Date.now());
 }
 
-setTimeout(change,4000)
 
 
+startBtn.addEventListener('click',function () {
+   const toPrint = setInterval(prints,1000)
 
-clearInterval()
 
+   stopBtn.addEventListener('click',function () {
+    clearInterval(toPrint)
+})
+})
 
 </script>
 
