@@ -5,32 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: #212121;
+
+            .card{
+            margin-top: 70px;
+            height: 50vh;
+            width: 30vh;
+            background-color: #f5c9c9;
+            border: none;
+            color: rgb(2, 78, 90);
+            border-radius: 22px;
+            text-align: center;
+            }
+
+            button{
+            background-color: rgb(2, 78, 90);
             color: #ffffff;
+            padding: 10px 20px;
+            font-size: 25px;
+            border: none;
+            border-radius: 25px;
+
+            }
+        img{
+            height: 135px;
+            width:118px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti hic quisquam ad saepe deserunt magni ipsam totam! Molestiae consectetur ullam, iusto commodi id iste tempore, similique, aliquam architecto esse saepe?</p>
+
+    <div class="card">
+        <div >
+            <img id="myimage" src="img2.jpeg" alt="">
+        </div>
+        <div class="folw">heres the followers</div>
+    </div>
+    <button>press</button>
 </body>
 <script>
-   const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+
+const submit = document.querySelector('button')
+
+
+        submit.addEventListener('click',function () {
+
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
 const xhr = new XMLHttpRequest()
 xhr.open('Get',requestUrl)
     console.log(xhr.readyState);
 xhr.onreadystatechange= function () {
+    if(xhr.readyState===3){
     console.log(xhr.readyState);
-    if(xhr.readyState===4){
+
         const data = JSON.parse(this.responseText)
-        console.log(data);
+        
         console.log(data.followers);
-        
-        
-        
+
+          
+            
+                                            // https://avatars.githubusercontent.com/u/11613311?v=
+const picture = document.getElementById("myimage")
+const print = document.getElementsByClassName("folw")
+
+
+    picture.src = data.avatar_url
+
+
+            print[0].innerText = `Followers: ${data.followers}`;
+            console.log("click");
     }
-    
+      
 }
 xhr.send()
+
+ })
+
 </script>
 </html>
