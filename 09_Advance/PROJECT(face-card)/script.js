@@ -25,7 +25,9 @@ const input = document.getElementById('linkInput');
 form.addEventListener('submit', function (event) {
   event.preventDefault(); // Stop page reload
 
-  const link = input.value.trim(); // Get link value
+  const link = input.value.tr
+  
+  im(); // Get link value
 
   if (link) {
     // Save link in local storage
